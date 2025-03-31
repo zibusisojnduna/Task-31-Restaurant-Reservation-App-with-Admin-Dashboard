@@ -16,6 +16,8 @@ app.use(morgan("dev"));
 
 // Routes
 app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/restaurants", require("./routes/restaurantRoutes"));
+app.use("/api/reservations", require("./routes/reservationRoutes"));
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
